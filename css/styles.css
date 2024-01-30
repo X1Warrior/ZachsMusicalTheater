@@ -121,8 +121,8 @@ body {
 
 /* HEADER  */
 header {
-  display: grid;
-  grid-template-columns: 51px auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2vw;
 }
@@ -131,6 +131,11 @@ header h1 {
   font-weight: 300;
   padding-left: 0.5rem;
   color: #cc7a26;
+}
+
+#logohead {
+  display: flex;
+  align-items: center;
 }
 
 /* NAVIGATION STUFF GOES HERE  */
@@ -222,14 +227,12 @@ footer a {
   /* NAVIGATION STUFF GOES HERE  */
   nav {
     background-color: #6aa9d2;
-    width: 100%;
   }
   nav ul {
     display: flex;
     align-items: center;
     padding: 10;
     margin: 10;
-    width: 100%;
   }
   nav ul li a {
     border: none;
@@ -241,6 +244,7 @@ footer a {
   main {
     max-width: 1240px;
     margin: auto;
+    width: 100%;
   }
   /* NAVIGATION STUFF GOES HERE  */
   nav ul li a {
@@ -248,7 +252,6 @@ footer a {
     font-size: 0.8rem;
   }
   nav {
-    width: 100vh;
     background-color: #6aa9d2;
     width: 100%;
   }
@@ -257,6 +260,5 @@ footer a {
     align-items: center;
     padding: 10;
     margin: 10;
-    width: 100%;
   }
 }

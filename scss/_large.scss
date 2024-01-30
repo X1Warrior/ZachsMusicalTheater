@@ -3,6 +3,7 @@ nav,
 main {
   max-width: 1240px;
   margin: auto;
+  width: 100%;
 }
 
 /* NAVIGATION STUFF GOES HERE  */
@@ -13,8 +14,6 @@ nav ul li a {
 }
 
 nav {
-  width: 100vh;
-
   background-color: lighten($menuColor, 30%);
   width: 100%;
   ul {
@@ -22,6 +21,5 @@ nav {
     align-items: center;
     padding: 10;
     margin: 10;
-    width: 100%;
   } //end of ul
 }
