@@ -1,0 +1,16 @@
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+  background-color: lighten($menuColor, 30%);
+  width: 100%;
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 10;
+    margin: 10;
+    width: 100%;
+  } //end of ul
+
+  ul li a {
+    border: none;
+  }
+}
