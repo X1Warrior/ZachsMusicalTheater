@@ -280,11 +280,13 @@ footer section.location p ion-icon {
     margin: auto;
     width: 100%;
   }
+  #navWrapper {
+    background-color: #f5dfc9;
+  }
   nav {
     visibility: visible;
     display: flex;
     justify-content: right;
-    background-color: #f5dfc9;
   }
   nav ul {
     align-items: center;

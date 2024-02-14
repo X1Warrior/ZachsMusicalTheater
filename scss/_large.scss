@@ -6,11 +6,14 @@ main {
   width: 100%;
 }
 
+#navWrapper {
+  background-color: lighten($primaryColor, 40%);
+}
 nav {
   visibility: visible;
   display: flex;
   justify-content: right;
-  background-color: lighten($primaryColor, 40%);
+
   ul {
     align-items: center;
     padding: 10;
