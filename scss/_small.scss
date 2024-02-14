@@ -2,6 +2,11 @@
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  background-image: linear-gradient(
+    to top,
+    lighten($primaryColor, 30%),
+    #f5f5f5
+  );
 }
 
 /*  apply a natural box layout model to all elements  */
@@ -32,15 +37,25 @@ header {
     color: $primaryColor;
   }
 } // end header
-
 #logohead {
   display: flex;
   align-items: center;
 }
 /* NAVIGATION STUFF GOES HERE  */
 
+div#navWrapper {
+  button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
 nav {
-  background-color: lighten($menuColor, 30%);
+  display: none;
+  visibility: hidden;
+  background-color: lighten($primaryColor, 40%);
   ul li a {
     color: #333;
     text-decoration: none;
@@ -53,71 +68,106 @@ nav {
   } //end of ul li a
 } //end of nav
 
+nav.show {
+  visibility: visible;
+  display: block;
+  ul {
+    display: block;
+  }
+} //end of nav.show
+
 ul li.active a {
   background-color: lighten($primaryColor, 20%);
 } //end of ul li.active a
 
-/* MAIN  */
-main {
-  p {
-    padding: 0.5rem 2vw;
-    color: #333;
-    line-height: 125%;
-  }
-  h1 {
-    padding: 1rem 2vw 0.5rem 2vw;
-    font-size: 1.5rem;
-    color: $secondaryColor;
-    font-weight: $lightWeight;
-  }
-} // end main
+.allCards {
+  section {
+    margin: 1rem;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
 
-main > div > div {
-  border: solid 1px #ccc;
-  text-align: center;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  margin: 5px;
-  h2 {
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-    color: $primaryColor;
-  }
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    h2,
+    p,
+    img {
+      padding: 1rem;
+      margin: 0;
+    }
+    h2 {
+      background-color: $primaryColor;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    a {
+      display: block;
+      background-color: $primaryColor;
+      padding: 0.75rem;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem 1rem 1rem;
+      border-radius: 10px;
+    }
   }
 }
-.parent1 {
-  margin: 0 2vw;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 8px;
-  column-gap: 8px;
-  justify-content: center;
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    max-height: 225px;
-    min-width: 250px;
-    border-radius: 10;
-  }
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 /* FOOTER  */
 #footerWrapper {
-  background-color: #1b1b1b;
+  background-color: lighten($primaryColor, 20%);
 }
+
 footer {
   font-size: 0.85rem;
   padding: 1rem 0;
-  color: #bbb;
   text-align: center;
-  a {
-    color: #eee;
-  }
+  padding-left: 20px;
+  color: #000000;
+
+  section.contact {
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem;
+      ion-icon {
+        color: rgb(255, 255, 255);
+        padding-right: 5px;
+      }
+      a {
+        &:hover {
+          color: darken($primaryColor, 20%);
+        }
+      }
+    }
+  } //end of section.contact
+
+  section.social {
+    display: flex;
+    justify-content: center;
+    a {
+      color: #fff;
+      padding: 1rem;
+      ion-icon {
+        font-size: 1.5rem;
+      }
+      &:hover {
+        color: darken($primaryColor, 20%);
+      }
+    }
+  } //end of section.social
+
+  section.location {
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem;
+      ion-icon {
+        color: rgb(255, 255, 255);
+        padding-right: 5px;
+      }
+    }
+  } //end of section.location
 }

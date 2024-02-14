@@ -1,14 +1,14 @@
 /* NAVIGATION STUFF GOES HERE  */
-nav {
-  background-color: lighten($menuColor, 30%);
-  ul {
-    display: flex;
-    align-items: center;
-    padding: 10;
-    margin: 10;
-  } //end of ul
 
-  ul li a {
-    border: none;
+.allCards {
+  display: flex;
+  flex-wrap: wrap;
+  section {
+    flex-basis: calc(45% - ($gutter/2));
   }
+}
+
+footer div {
+  display: grid;
+  grid-template-columns: auto auto;
 }

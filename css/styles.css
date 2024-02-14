@@ -104,6 +104,7 @@ input, select {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  background-image: linear-gradient(to top, #edc69e, #f5f5f5);
 }
 
 /*  apply a natural box layout model to all elements  */
@@ -139,8 +140,17 @@ header h1 {
 }
 
 /* NAVIGATION STUFF GOES HERE  */
+div#navWrapper button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
 nav {
-  background-color: #6aa9d2;
+  display: none;
+  visibility: hidden;
+  background-color: #f5dfc9;
 }
 nav ul li a {
   color: #333;
@@ -153,89 +163,110 @@ nav ul li a:hover {
   background-color: #eee;
 }
 
+nav.show {
+  visibility: visible;
+  display: block;
+}
+nav.show ul {
+  display: block;
+}
+
 ul li.active a {
   background-color: #e5ad73;
 }
 
-/* MAIN  */
-main p {
-  padding: 0.5rem 2vw;
-  color: #333;
-  line-height: 125%;
-}
-main h1 {
-  padding: 1rem 2vw 0.5rem 2vw;
-  font-size: 1.5rem;
-  color: #265b7d;
-  font-weight: 300;
-}
-
-main > div > div {
-  border: solid 1px #ccc;
-  text-align: center;
-  border: 2px solid #ccc;
+.allCards section {
+  margin: 1rem;
+  border: 1px solid #000000;
   border-radius: 10px;
-  margin: 5px;
+  overflow: hidden;
 }
-main > div > div h2 {
-  font-size: 1.2rem;
-  padding: 0.5rem 0;
-  color: #cc7a26;
+.allCards section h2,
+.allCards section p,
+.allCards section img {
+  padding: 1rem;
+  margin: 0;
 }
-main > div > div img {
+.allCards section h2 {
+  background-color: #cc7a26;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.allCards section a {
   display: block;
-  width: 100%;
-  height: auto;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  background-color: #cc7a26;
+  padding: 0.75rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem 1rem 1rem;
+  border-radius: 10px;
 }
 
-.parent1 {
-  margin: 0 2vw;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 8px;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  justify-content: center;
-}
-.parent1 img {
+img {
   width: 100%;
   height: auto;
-  max-width: 400px;
-  max-height: 225px;
-  min-width: 250px;
-  border-radius: 10;
 }
 
 /* FOOTER  */
 #footerWrapper {
-  background-color: #1b1b1b;
+  background-color: #e5ad73;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 0;
-  color: #bbb;
   text-align: center;
+  padding-left: 20px;
+  color: #000000;
 }
-footer a {
-  color: #eee;
+footer section.contact p {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+footer section.contact p ion-icon {
+  color: rgb(255, 255, 255);
+  padding-right: 5px;
+}
+footer section.contact p a:hover {
+  color: #764716;
+}
+footer section.social {
+  display: flex;
+  justify-content: center;
+}
+footer section.social a {
+  color: #fff;
+  padding: 1rem;
+}
+footer section.social a ion-icon {
+  font-size: 1.5rem;
+}
+footer section.social a:hover {
+  color: #764716;
+}
+footer section.location p {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+footer section.location p ion-icon {
+  color: rgb(255, 255, 255);
+  padding-right: 5px;
 }
 
 @media only screen and (min-width: 35rem) {
   /* NAVIGATION STUFF GOES HERE  */
-  nav {
-    background-color: #6aa9d2;
-  }
-  nav ul {
+  .allCards {
     display: flex;
-    align-items: center;
-    padding: 10;
-    margin: 10;
+    flex-wrap: wrap;
   }
-  nav ul li a {
-    border: none;
+  .allCards section {
+    flex-basis: calc(45% - 8px);
+  }
+  footer div {
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }
 @media only screen and (min-width: 64rem) {
@@ -246,13 +277,29 @@ footer a {
     margin: auto;
     width: 100%;
   }
+  nav {
+    visibility: visible;
+    display: flex;
+    justify-content: right;
+    background-color: #f5dfc9;
+  }
+  nav ul {
+    align-items: center;
+    padding: 10;
+    margin: 10;
+  }
+  nav ul li a {
+    border: none;
+  }
   /* NAVIGATION STUFF GOES HERE  */
   nav ul li a {
     padding: 0.6rem 2rem;
     font-size: 0.8rem;
   }
+  .hamBtn {
+    display: none;
+  }
   nav {
-    background-color: #6aa9d2;
     width: 100%;
   }
   nav ul {
@@ -260,5 +307,13 @@ footer a {
     align-items: center;
     padding: 10;
     margin: 10;
+  }
+  .allCards section {
+    flex-basis: calc(31% - 5.3333333333px);
+    flex-wrap: wrap;
+  }
+  footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }

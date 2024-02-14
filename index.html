@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Zachs musical theater</title>
+    <title>Zachs Diner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
   </head>
 
   <body>
@@ -32,7 +34,7 @@
               height="50"
               scrset="images/logo1x.png, images/logo2x.png, images/logo3x.png"
           /></a>
-          <h1>Zachs Musical Theater</h1>
+          <h1>Zachs Diner</h1>
         </div>
         <div>
           <h1 id="number"><a href="tel:+18012382795">8012382795</a></h1>
@@ -42,13 +44,15 @@
     <!-- end header wrapper -->
 
     <div id="navWrapper">
-      <nav>
+      <button class="hamBtn">&#9776;</button>
+      <nav>  
         <ul>
-          <li class="active"><a href="#">Current Plays</a></li>
+          <li class="active"><a href="#">Menu</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Tickets</a></li>
-          <li><a href="#">Cast</a></li>
+          <li><a href="#">Shows</a></li>
+          <li><a href="#">Locations</a></li>
           <li><a href="#">Contact</a></li>
+          
         </ul>
       </nav>
     </div>
@@ -56,138 +60,48 @@
 
     <div id="mainWrapper">
       <main>
-        <div class="parent1">
-          <div>
-            <h2>Newsies</h2>
-            <h3>2/15-3-16</h3>
-            <img
-              src="images/Newsies.webp"
-              alt="Newsies"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Addams Family</h2>
-            <h3>3/17-4/18</h3>
-            <img
-              src="images/AddamsFamily.webp"
-              alt="AddamsFamily"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Beauty and the Beast</h2>
-            <h3>4/19-5/20</h3>
-            <img
-              src="images/BeatyAndTheBeast.webp"
-              alt="BeatyAndTheBeast"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Clue</h2>
-            <h3>5/21-6/22</h3>
-            <img
-              src="images/Clue.webp"
-              alt="Clue"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Fiddler on the Roof</h2>
-            <h3>6/23-7/24</h3>
-            <img
-              src="images/Fiddler.webp"
-              alt="Fiddler"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>May We All</h2>
-            <h3>7/25-8/26</h3>
-            <img
-              src="images/MayWeAll.webp"
-              alt="MayWeAll"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Magicians Elephant</h2>
-            <h3>8/27-9/28</h3>
-            <img
-              src="images/MagiciansElephant.webp"
-              alt="MagiciansElephant"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Musical Tribute</h2>
-            <h3>9/29-10/30</h3>
-            <img
-              src="images/MusicalTribute.webp"
-              alt="MusicalTribute"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Nutty Proffessor</h2>
-            <h3>10/31-11/1</h3>
-            <img
-              src="images/NuttyProffessor.webp"
-              alt="NuttyProfessor"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Sound Of Music</h2>
-            <h3>11/2-12/3</h3>
-            <img
-              src="images/SoundOfMusic.webp"
-              alt="SoundOfMusic"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>Time Machine</h2>
-            <h3>12/4-1/5</h3>
-            <img
-              src="images/TimeMachine.webp"
-              alt="TimeMachine"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <h2>A Christmas Carol</h2>
-            <h3>12/4-1/5</h3>
-            <img
-              src="images/AChristasCarol.webp"
-              alt="AChristmasCarol.webp"
-              width="400"
-              height="225"
-              loading="lazy"
-            />
+        <div class="allCards">
+          <section>
+            <h2>Breakfast</h2>
+            <img src="images/Breakfast.webp" alt="Breakfast" width="300" height="175">
+            <p>Best Breakfast in Utah County! Eggs however you want them, Toast cooked to perfecion.
+              We got you!
+            </p>
+            <a href="#">Order now</a>
+          </section>
+          
+          <section>
+            <h2>Burgers</h2>
+            <img src="images/Burgers.webp" alt="Burgers" width="300" height="175">
+            <p>Our Burgers are the best in the state! We have a variety of options to choose from.
+              You will not be disappointed!</p>
+            <a href="#">Order now</a>
+          </section>
+
+          <section>
+            <h2>Shakes</h2>
+            <img src="images/Shakes.webp" alt="Shakes" width="300" height="175">
+            <p>Our Shakes are the Richest in the state! We have a variety of options to choose from.
+              You will not be disappointed!</p>
+            <a href="#">Order now</a>
+          </section>
+
+          <section>
+            <h2>Drinks</h2>
+            <img src="images/Drinks.webp" alt="Drinks" width="300" height="175">
+            <p>We have a large selection of old time and new time drinks!
+              Come on in and try one today!
+            </p>
+            <a href="#">Order now</a>
+          </section>
+
+          <section>
+            <h2>Soups</h2>
+            <img src="images/Soups.webp" alt="Soups" width="300" height="175">
+            <p>Want a hot bowl of perfection? This is your next stop then!</p>
+            <a href="#">Order now</a>
+          </section>
+
           </div>
         </div>
       </main>
@@ -196,13 +110,41 @@
 
     <div id="footerWrapper">
       <footer>
+        <div>
+          <section class="contact">
+            <p>Zachary Stout</p>
+            <p>Zach's Diner</p>
+            <p><ion-icon name="mail-outline"></ion-icon><a href="mailto:Zach@diner.com">Zach@diner.com</a></p>
+
+            <p><ion-icon name="globe-outline"></ion-icon><a href="https://zachDiner.com">Zachdiner.com</a></p>
+
+            <p><ion-icon name="call-outline"></ion-icon><a href="tel:8018382375">8018382375</a></p>
+          </section>
+
+          <section class="social">
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"> <ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </section>
+
+          <section class="location">
+            <address>
+              <p>1234 Main Street<br>
+              Provo, UT 84601</p>
+            </address>
+          </section>
+        </div>
         <p>
-          Copyright &copy; 2024 Zachs Musical Theater. All rights reserved.
+          Copyright &copy; 2024 Zachs Diner. All rights reserved.
           <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> |
           <a href="#">Sales</a> | <a href="#">Clients</a>
         </p>
       </footer>
+      
     </div>
     <!-- end footer wrapper -->
+    <script src="js/scripts.js"></script>
   </body>
 </html>

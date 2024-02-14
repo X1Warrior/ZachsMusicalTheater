@@ -6,6 +6,21 @@ main {
   width: 100%;
 }
 
+nav {
+  visibility: visible;
+  display: flex;
+  justify-content: right;
+  background-color: lighten($primaryColor, 40%);
+  ul {
+    align-items: center;
+    padding: 10;
+    margin: 10;
+  } //end of ul
+
+  ul li a {
+    border: none;
+  }
+}
 /* NAVIGATION STUFF GOES HERE  */
 
 nav ul li a {
@@ -13,8 +28,11 @@ nav ul li a {
   font-size: 0.8rem;
 }
 
+.hamBtn {
+  display: none;
+}
+
 nav {
-  background-color: lighten($menuColor, 30%);
   width: 100%;
   ul {
     display: flex;
@@ -22,4 +40,16 @@ nav {
     padding: 10;
     margin: 10;
   } //end of ul
+}
+
+.allCards {
+  section {
+    flex-basis: calc(31% - ($gutter / 3));
+    flex-wrap: wrap;
+  }
+}
+
+footer div {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
