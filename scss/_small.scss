@@ -36,6 +36,9 @@ header {
     padding-left: 0.5rem;
     color: $primaryColor;
   }
+  #number a {
+    color: $primaryColor;
+  }
 } // end header
 #logohead {
   display: flex;

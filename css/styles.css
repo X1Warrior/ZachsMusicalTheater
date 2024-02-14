@@ -133,6 +133,9 @@ header h1 {
   padding-left: 0.5rem;
   color: #cc7a26;
 }
+header #number a {
+  color: #cc7a26;
+}
 
 #logohead {
   display: flex;
