@@ -143,6 +143,10 @@ header #number a {
 }
 
 /* NAVIGATION STUFF GOES HERE  */
+a {
+  color: WHITE;
+}
+
 div#navWrapper button {
   background: transparent;
   border: none;
@@ -256,6 +260,9 @@ footer section.location p {
 footer section.location p ion-icon {
   color: rgb(255, 255, 255);
   padding-right: 5px;
+}
+footer a:hover {
+  color: #764716;
 }
 
 @media only screen and (min-width: 35rem) {

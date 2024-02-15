@@ -46,6 +46,9 @@ header {
 }
 /* NAVIGATION STUFF GOES HERE  */
 
+a {
+  color: WHITE;
+}
 div#navWrapper {
   button {
     background: transparent;
@@ -173,4 +176,7 @@ footer {
       }
     }
   } //end of section.location
+  a:hover {
+    color: darken($primaryColor, 20%);
+  }
 }
