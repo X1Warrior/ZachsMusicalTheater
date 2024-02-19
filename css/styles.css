@@ -205,7 +205,8 @@ ul li.active a {
   background-color: #cc7a26;
   padding: 0.75rem;
   text-align: center;
-  color: #fff;
+  color: black;
+  font-weight: bold;
   text-decoration: none;
   margin: 0 1rem 1rem 1rem;
   border-radius: 10px;
@@ -218,7 +219,7 @@ img {
 
 /* FOOTER  */
 #footerWrapper {
-  background-color: #e5ad73;
+  background-color: #dd9348;
 }
 
 footer {
@@ -226,6 +227,9 @@ footer {
   padding: 1rem 0;
   text-align: center;
   padding-left: 20px;
+  color: #000000;
+}
+footer a {
   color: #000000;
 }
 footer section.contact p {
@@ -244,8 +248,8 @@ footer section.social {
   justify-content: center;
 }
 footer section.social a {
-  color: #fff;
   padding: 1rem;
+  color: white;
 }
 footer section.social a ion-icon {
   font-size: 1.5rem;
